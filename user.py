@@ -40,6 +40,19 @@ class User:
             if user.user_name == user_name:
                 return user
 
-    
+    @classmethod
+    def view_user_details(cls, user_name):
+        """
+        Method that checks if a user exists in the user list.
+        args:
+        user_name: "check if a user exists.
+        returns: boolean(True or False), depending on whether a user exists or not.
+        """
+
+        for user in cls.users_list:
+            if user.user_name == user_name:
+                return True
+            else:
+                return False
     
     
