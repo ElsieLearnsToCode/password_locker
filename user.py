@@ -19,5 +19,10 @@ class User:
         """
         User.users_list.append(self)
     
-    
+    def view_user_exists(self):
+        """
+        This method allows a user to view how their details are saved on the app 
+        """
+        return User.users_list
+
     
