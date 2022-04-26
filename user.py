@@ -30,4 +30,6 @@ class User:
         This method deletes a user's account from the app
         """
         User.users_list.remove(self)
+
+    
     
