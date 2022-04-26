@@ -1,1 +1,1 @@
-print("Hello, Welcome to PassWord Locker password Manager")
+print("Hello, Welcome to PassWordLocker™ password Manager")
