@@ -12,3 +12,10 @@ class User:
     def __init__(self, user_name, password ):
         self.user_name = user_name
         self.password = password
+    
+    def save_users(self):
+        """
+        This method stores the details of each user to the empty users list
+        """
+        User.users_list.append(self)
+    
