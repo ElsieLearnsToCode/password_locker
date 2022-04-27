@@ -78,4 +78,5 @@ class TestUser(unittest.TestCase):
 
     #     user_exists = User.view_user_exists(self)
     #     self.assertTrue(user_exists)
-    
+if __name__ == '__main__':
+    unittest.main()   
