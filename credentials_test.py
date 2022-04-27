@@ -23,6 +23,13 @@ class TestCredentials(unittest.TestCase):
         self.assertEqual(self.new_credentials.user_name, "Stella")
         self.assertEqual(self.new_credentials.password, "ABCDEFGH")
 
+    def test_save_user_credentials(self):
+        """
+        test if user credentials are being saved properly
+        """
+        self.new_credentials.save_user_credentials() #saving the new users
+        self.assertEqual(len(Credentials.existing_credentials), 1)
+
 
 
 
