@@ -45,6 +45,15 @@ class TestCredentials(unittest.TestCase):
         test_credentials.save_user_credentials()
         self.assertEqual(Credentials.view_user_credentials(), Credentials.existing_credentials)
 
+    def test_view_account_details(self):
+        """
+        method thats tests if the user to view the details of a given account saved in the credentials list
+        """
+        self.new_credentials.view_account_details("Brian")
+        test_credentials = Credentials("Twitter", "Brian", "klmNOPQR")
+        test_credentials.view_account_details("Brian")
+        self.assertEqual(Credentials.view_account_details(), Credentials.existing_credentials)
+
 
 
 
