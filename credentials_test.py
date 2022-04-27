@@ -30,6 +30,12 @@ class TestCredentials(unittest.TestCase):
         self.new_credentials.save_user_credentials() #saving the new users
         self.assertEqual(len(Credentials.existing_credentials), 1)
 
+    def tearDown(self):
+        """
+        tearDown method that does cleanup after each test has run.
+        """
+        Credentials.existing_credentials = []
+
 
 
 
