@@ -39,3 +39,10 @@ class Credentials:
         Method that allows a user to delete their credentials from the app
         """
         Credentials.existing_credentials.remove(self)
+
+    @classmethod
+    def view_user_credentials(cls):
+        """
+        function that displays user credentials
+        """
+        return cls.existing_credentials
