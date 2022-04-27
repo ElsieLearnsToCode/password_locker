@@ -25,3 +25,12 @@ class Credentials:
         This method allows a user to view how their details are saved on the app 
         """
         return Credentials.existing_credentials
+
+    def view_account_details(self, website):
+        """
+        This method allows the user to view the details of a given account saved in the credentials list
+        """
+        for credential in Credentials.existing_credentials:
+            if (credential.website == website):
+                return credential
+                
