@@ -33,4 +33,9 @@ class Credentials:
         for credential in Credentials.existing_credentials:
             if (credential.website == website):
                 return credential
-                
+
+    def delete_credentials(self):
+        """
+        Method that allows a user to delete their credentials from the app
+        """
+        Credentials.existing_credentials.remove(self)
