@@ -15,6 +15,13 @@ class TestCredentials(unittest.TestCase):
         """
         self.new_credentials = Credentials("twitter", "Stella", "ABCDEFGH")
 
+    def test_innit(self):
+        """
+        test_innit test case tests if the object is initialized properly.
+        """
+        self.assertEqual(self.new_credentials.website, "twitter")
+        self.assertEqual(self.new_credentials.user_name, "Stella")
+        self.assertEqual(self.new_credentials.password, "ABCDEFGH")
 
 
 
