@@ -35,6 +35,15 @@ class TestCredentials(unittest.TestCase):
         tearDown method that does cleanup after each test has run.
         """
         Credentials.existing_credentials = []
+    
+    def test_view_user_credentials(self):
+        """
+        method that tests whether we can display a users credentials
+        """
+        self.new_credentials.save_user_credentials()
+        test_credentials = Credentials("Twitter", "Brian", "klmNOPQR")
+        test_credentials.save_user_credentials()
+        self.assertEqual(Credentials.view_user_credentials(), Credentials.existing_credentials)
 
 
 
