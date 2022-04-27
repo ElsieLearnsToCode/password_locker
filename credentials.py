@@ -19,4 +19,9 @@ class Credentials:
         """  
 
         Credentials.existing_credentials.append(self)
-        
+    
+    def view_user_credentials(self):
+        """
+        This method allows a user to view how their details are saved on the app 
+        """
+        return Credentials.existing_credentials
