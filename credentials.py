@@ -46,3 +46,15 @@ class Credentials:
         function that displays user credentials
         """
         return cls.existing_credentials
+    
+    @classmethod
+    def verify_user(cls, user_name, password):
+        """
+        function that checks if the name and password of a user match entries in the users list
+        """
+        existing_user = ""
+        for user in Credentials.existing_credentials:
+            if (user.user_name == user_name and user.password ==password):
+                existing_user = user.user_name
+                return existing_user
+		            
